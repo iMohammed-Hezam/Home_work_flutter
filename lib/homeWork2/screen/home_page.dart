@@ -29,23 +29,29 @@ class HomePage extends StatelessWidget {
                 spacing: 16,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  CustomStatsCard(
-                    icon: Icons.people,
-                    iconColor: Color(0xff653cb9),
-                    value: '1,234',
-                    label: 'Users',
+                  Expanded(
+                    child: CustomStatsCard(
+                      icon: Icons.people,
+                      iconColor: Color(0xff653cb9),
+                      value: '1,234',
+                      label: 'Users',
+                    ),
                   ),
-                  CustomStatsCard(
-                    icon: Icons.star,
-                    iconColor: Color(0xffff9601),
-                    value: '4.8',
-                    label: 'Rating',
+                  Expanded(
+                    child: CustomStatsCard(
+                      icon: Icons.star,
+                      iconColor: Color(0xffff9601),
+                      value: '4.8',
+                      label: 'Rating',
+                    ),
                   ),
-                  CustomStatsCard(
-                    icon: Icons.show_chart,
-                    iconColor: Color(0xff2692ea),
-                    value: '98%',
-                    label: 'Success',
+                  Expanded(
+                    child: CustomStatsCard(
+                      icon: Icons.trending_up,
+                      iconColor: Color(0xff2692ea),
+                      value: '98%',
+                      label: 'Success',
+                    ),
                   ),
                 ],
               ),
