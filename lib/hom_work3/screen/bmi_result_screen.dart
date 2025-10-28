@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:home_work_flutter/hom_work3/model/global.dart';
 
 class BMIResultScreen extends StatelessWidget {
-  final double bmi;
-  final bool isMale;
-  final int age;
+  final InputData inputData;
 
-  const BMIResultScreen({
-    super.key,
-    required this.bmi,
-    required this.isMale,
-    required this.age,
-  });
+  const BMIResultScreen({super.key, required this.inputData});
 
   String getResult() {
-    if (bmi < 18.5) return 'Underweight';
-    if (bmi >= 18.5 && bmi < 25) return 'Normal';
-    if (bmi >= 25 && bmi < 30) return 'Overweight';
+    if (inputData.getResult < 18.5) return 'Underweight';
+    if (inputData.getResult >= 18.5 && inputData.getResult < 25)
+      return 'Normal';
+    if (inputData.getResult >= 25 && inputData.getResult < 30)
+      return 'Overweight';
     return 'Obese';
   }
 
@@ -41,17 +37,17 @@ class BMIResultScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                isMale ? 'Male' : 'Female',
+                inputData.isMale ? 'Male' : 'Female',
                 style: const TextStyle(color: Colors.white, fontSize: 25),
               ),
               const SizedBox(height: 10),
               Text(
-                'Age: $age',
+                'Age: ${inputData.age}',
                 style: const TextStyle(color: Colors.grey, fontSize: 20),
               ),
               const SizedBox(height: 20),
               Text(
-                'BMI: ${bmi.toStringAsFixed(1)}',
+                'BMI: ${inputData.getResult.toStringAsFixed(1)}',
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 50,

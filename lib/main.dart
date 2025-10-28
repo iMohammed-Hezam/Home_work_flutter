@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_work_flutter/hom_work3/bmi_screen.dart';
+import 'package:home_work_flutter/hom_work3/screen/bmi_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,10 +11,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: BmiScreen(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: BmiScreen());
   }
 }
