@@ -3,7 +3,7 @@ import 'package:home_work_flutter/hom_work3/model/global.dart';
 import 'package:home_work_flutter/hom_work3/widget/gender_widgets/gender_card.dart';
 
 class GenderSelection extends StatefulWidget {
-  final InputData inputData;
+  final BimData inputData;
 
   const GenderSelection({super.key, required this.inputData});
 

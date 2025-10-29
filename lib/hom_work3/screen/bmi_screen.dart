@@ -13,7 +13,7 @@ class BmiScreen extends StatefulWidget {
 }
 
 class _BmiScreenState extends State<BmiScreen> {
-  InputData inputData = InputData();
+  BimData inputData = BimData();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

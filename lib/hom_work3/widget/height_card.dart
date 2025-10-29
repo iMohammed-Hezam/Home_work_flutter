@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_work_flutter/hom_work3/model/global.dart';
 
 class HeightCard extends StatefulWidget {
-  final InputData inputData;
+  final BimData inputData;
 
   const HeightCard({super.key, required this.inputData});
 

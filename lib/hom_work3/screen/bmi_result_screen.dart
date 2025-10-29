@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_work_flutter/hom_work3/model/global.dart';
 
 class BMIResultScreen extends StatelessWidget {
-  final InputData inputData;
+  final BimData inputData;
 
   const BMIResultScreen({super.key, required this.inputData});
 

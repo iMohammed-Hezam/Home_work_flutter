@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:home_work_flutter/hom_work3/model/global.dart';
+import 'package:home_work_flutter/hom_work3/widget/weight_age_widgets/age_card.dart';
 import 'package:home_work_flutter/hom_work3/widget/weight_age_widgets/weight_age_card.dart';
+import 'package:home_work_flutter/hom_work3/widget/weight_age_widgets/weight_card.dart';
 
 class WeightAgeSection extends StatefulWidget {
-  final InputData inputData;
+  final BimData inputData;
   const WeightAgeSection({super.key, required this.inputData});
 
   @override
@@ -11,45 +13,14 @@ class WeightAgeSection extends StatefulWidget {
 }
 
 class _WeightAgeSectionState extends State<WeightAgeSection> {
-  
   @override
   Widget build(BuildContext context) {
     return Row(
       spacing: 10,
       children: [
-        Expanded(
-          child: WeightAgeCard(
-            label: 'WEIGHT',
-            value: widget.inputData.weight,
-            onTapDecrement: () {
-              setState(() {
-                widget.inputData.weight--;
-              });
-            },
-            onTapIncerement: () {
-              setState(() {
-                widget.inputData.weight++;
-              });
-            },
-          ),
-        ),
+        Expanded(child: WeightCard(inputData: widget.inputData)),
         SizedBox(width: 20),
-        Expanded(
-          child: WeightAgeCard(
-            label: 'Age',
-            value: widget.inputData.age,
-            onTapDecrement: () {
-              setState(() {
-                widget.inputData.age--;
-              });
-            },
-            onTapIncerement: () {
-              setState(() {
-                widget.inputData.age++;
-              });
-            },
-          ),
-        ),
+        Expanded(child: AgeCard(inputData: widget.inputData)),
       ],
     );
   }

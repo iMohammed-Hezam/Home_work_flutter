@@ -5,7 +5,7 @@ import 'package:home_work_flutter/hom_work3/model/global.dart';
 import 'package:home_work_flutter/hom_work3/screen/bmi_result_screen.dart';
 
 class CalculateButton extends StatefulWidget {
-  final InputData inputData;
+  final BimData inputData;
 
   const CalculateButton({super.key, required this.inputData});
 
